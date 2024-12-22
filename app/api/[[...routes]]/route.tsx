@@ -122,8 +122,8 @@ app.frame('/search', async (c)=>{
           return(
           <li key={index} 
           style={{
-              marginBottom: '2px',
-              fontSize: '35px',
+              marginBottom: '1px',
+              fontSize: 45,
               fontWeight: 'bold',
               wordBreak: 'break-word'
           }} >{r}</li>)});
@@ -151,7 +151,7 @@ app.frame('/search', async (c)=>{
       flexDirection:'column',
       alignItems:"flex-start",
       justifyContent:'flex-start',
-      fontSize:'40px',
+      fontSize:55,
       position:'relative',
   }}
     >
@@ -165,7 +165,7 @@ app.frame('/search', async (c)=>{
                     flexDirection:'column',
                     alignItems:"flex-start",
                     justifyContent:'flex-start',
-                    fontSize:'40px',
+                    fontSize:55,
                     position:'relative',
                 }}
             >
@@ -176,6 +176,7 @@ app.frame('/search', async (c)=>{
                     textAlign:'center',
                     justifyContent:'center',
                     fontWeight:'900',
+                    fontSize:55,
                 }}
                ><div
                     style={{
@@ -183,7 +184,8 @@ app.frame('/search', async (c)=>{
                         textTransform:"capitalize",
                         marginRight:"5px",
                         marginLeft:"5px",
-                        fontWeight:'900',
+                        fontWeight: 'bold',
+                        fontSize:55,
                         
                     }}
                > {inputText?.split(".")[0]}
@@ -195,7 +197,7 @@ app.frame('/search', async (c)=>{
                         display:'flex',
                         flexDirection:'column',
                         gap:'10px',
-                        fontSize:'35px',
+                        fontSize:55,
                         fontWeight: 'bold',
                         justifyContent:"flex-start",
                         textAlign:"left",
@@ -203,12 +205,29 @@ app.frame('/search', async (c)=>{
                         top:120,
                         left:10,
                         height:'500px',
-                        flexWrap:'wrap'
+                        flexWrap:'wrap',
+                        marginTop:'10px'
                     }}
                 >
                     {state.count}
                 </ol>
-      </div> : <div>This user does not exist!</div>  }
+      </div> : <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'blue',
+          color:'white',
+          flexDirection:'column',
+          alignItems:"center",
+          justifyContent:'flex-start',
+          fontSize:55,
+          position:'relative',
+          paddingTop:'100px'
+        }}
+      >
+        This user does not exist!
+        </div> }
     </div>
     ),
     intents:[
