@@ -70,7 +70,7 @@ app.frame('/', (c) => {
       </div>
     ),
     intents: [
-      <Button value="start">Start</Button>,
+      <Button value="start">Start ▶️</Button>,
     ],
   })
 })
@@ -104,7 +104,7 @@ app.frame('/start', (c)=>{
 
 app.frame('/search', async (c)=>{
   const {inputText, deriveState, buttonValue} = c;
-  const fetchdata = await fetch(`https://fetch-api-mauve-iota.vercel.app/api/${inputText}`)
+  const fetchdata = await fetch(`${process.env.ENDPOINT}${inputText}`)
   .then((r)=>{
   return r.json()
   }).then((data)=> {
@@ -123,8 +123,8 @@ app.frame('/search', async (c)=>{
           <li key={index} 
           style={{
               marginBottom: '2px',
-              fontSize: '30px',
-              fontWeight:'900', 
+              fontSize: '35px',
+              fontWeight: 'bold',
               wordBreak: 'break-word'
           }} >{r}</li>)});
           //@ts-ignore
@@ -195,8 +195,8 @@ app.frame('/search', async (c)=>{
                         display:'flex',
                         flexDirection:'column',
                         gap:'10px',
-                        fontSize:'30px',
-                        fontWeight:900,
+                        fontSize:'35px',
+                        fontWeight: 'bold',
                         justifyContent:"flex-start",
                         textAlign:"left",
                         position:"absolute",
@@ -212,7 +212,7 @@ app.frame('/search', async (c)=>{
     </div>
     ),
     intents:[
-      <Button>Restart</Button>
+      <Button>Start over🔁</Button>
     ]
   })
 })
