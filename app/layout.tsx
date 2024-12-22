@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph:{
     title:'Check Domain',
     description:'Use this frame toc check bns an address own',
-    images:['http:://localhost:3000/image.png'],
+    images:['https://crack-bns.vercel.app/image.png'],
   },
 }
 export default function RootLayout({
